@@ -1,10 +1,13 @@
+# -*- encoding : utf-8 -*-
 Site4soft::Application.routes.draw do
 
-  get "static/index"
+  devise_for :users
 
   resources :members
 
-  devise_for :users
+  match 'members/create' => 'members#create', :via => :post
+
+  root :to => 'static#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

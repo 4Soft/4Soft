@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Member < ActiveRecord::Base
   attr_accessible :bio, :facebook, :github, :linkedin,
     :name, :telefone, :twitter

@@ -15,6 +15,10 @@ gem 'acts-as-taggable-on'
 
 gem 'paperclip'
 
+gem 'tlsmail'
+
+gem 'magic_encoding'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

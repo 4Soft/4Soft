@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ApplicationHelper
 	def gravatar_for(user)
 	    gravatar_id = Digest::MD5::hexdigest(user.profile.email.downcase)

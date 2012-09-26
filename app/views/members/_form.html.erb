@@ -42,13 +42,14 @@
           <%= ff.text_field :email %>
         </div>
         <div class="field">
-          <%= ff.label :password, "Senha" %><br />
+          <%= ff.label :password, "Senha (deixe em branco caso não deseje alterar a senha)*" %><br />
           <%= ff.text_field :password %>
         </div>
         <div class="field">
           <%= ff.label :password_confirmation, "Confirmar senha" %><br />
           <%= ff.text_field :password_confirmation %>
         </div>
+        <p class="aviso">Pode requerer que o usuário relogue no sistema</p>
     </fieldset>
   <%  end %> 
 

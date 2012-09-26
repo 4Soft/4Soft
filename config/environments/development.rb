@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Site4soft::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +35,28 @@ Site4soft::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  require 'tlsmail'
+
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+
+  config.action_mailer.smtp_settings = {
+    :address              => 'smtp.gmail.com',
+    :port                 => 587,
+    :domain               => 'gmail.com',
+    :user_name            => ENV['EMAIL'],
+    :password             => ENV['PASSWORD'],
+    :authentication       => 'login',
+    :enable_starttls_auto => true
+  }
 end
