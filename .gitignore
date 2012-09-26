@@ -1,0 +1,7 @@
+config/database.yml
+*.swp
+/.bundle
+/db/*.sqlite3
+/log/*.log
+/tmp
+public/assets/**
