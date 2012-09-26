@@ -1,4 +1,11 @@
 Site4soft::Application.routes.draw do
+
+  get "static/index"
+
+  resources :members
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
