@@ -1,8 +1,8 @@
 production:
   domain   : gmail.com
-  user_name: ENV['EMAIL']
-  password : ENV['PASSWORD']
+  user_name: boladaodeamor123@gmail.com
+  password : hunter123#
 development:
   domain   : gmail.com
-  user_name: ENV['EMAIL']
-  password : ENV['PASSWORD']
+  user_name: boladaodeamor123@gmail.com
+  password : hunter123#

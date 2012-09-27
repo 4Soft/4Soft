@@ -5,6 +5,7 @@ Site4soft::Application.routes.draw do
 
   resources :members
 
+  #criacao de membros
   match 'members/create' => 'members#create', :via => :post
 
   root :to => 'static#index'
