@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DeviseCreate:views < ActiveRecord::Migration
   def change
     create_table(::views) do |t|

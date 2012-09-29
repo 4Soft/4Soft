@@ -1,9 +1,9 @@
 # -*- encoding : utf-8 -*-
 Site4soft::Application.routes.draw do
 
+  get "admin/index"
+
   devise_for :users
-
-
 
   #criacao de membros
   match 'members/create' => 'members#create', :via => :post
@@ -11,9 +11,13 @@ Site4soft::Application.routes.draw do
   #edicao de membros 
   match 'members/edit' => 'members#edit', :as => :member_edit
 
+  resources :members
+
+  match 'admin/index' => 'admin#index', :as => :admin_home
+
   root :to => 'home#index'
 
-  resources :members
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,7 +1,5 @@
 # -*- encoding : utf-8 -*-
 class MembersController < ApplicationController
-
-  before_filter :authenticate_user!, :except => [:show, :index]
   
   before_filter :admin_only, :only => [:new, :create, :destroy]
   before_filter :member_only, :only => [:edit, :update]
@@ -38,19 +36,15 @@ class MembersController < ApplicationController
     redirect_to root_path, 
       :notice => 'Novo membro adicionado com sucesso'
   rescue 
-      flash[:notice] = notice + "Algum erro aconteceu"
+      flash[:notice] = "Algum erro aconteceu"
       render :action => :new
   end
 
-  #pode ser gambiarra, olhar isso ae
   def edit
-    #nao importa a id passada, sempre editara apenas o membro logado
     @member = current_user.profileable
   end
 
-  #pode ser gambiarra, olhar isso ae
   def update
-    #nao importa a id passada, sempre editara apenas o membro logado
     @member = current_user.profileable
     @member.update_attributes(params[:member].except(:profile_attributes))
 
@@ -71,20 +65,4 @@ class MembersController < ApplicationController
 
   def destroy
   end  
-
-  private
-  #colocar isso em algum lugar mais decente
-  def admin_only
-    unless current_user.profileable_type == "Admin"
-      flash[:notice] = "Permissão negada"
-      redirect_to members_path
-    end
-  end
-
-  def member_only
-    unless current_user.profileable_type == "Member"
-      flash[:notice] = "Permissão negada"
-      redirect_to members_path
-    end
-  end
 end

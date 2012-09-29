@@ -1,10 +1,12 @@
+<%= render "devise/shared/topbar"%>
+
 <%= form_tag "create", :method => :post do %>
   
   <fieldset>
     <legend>Informações do cadastro</legend>
     <div class="field">
       <%= label_tag :email, "Email do membro" %><br/>
-      <%= text_field_tag :email, "" %>
+      <%= email_field_tag :email %>
     </div>
   </fieldset>
 
