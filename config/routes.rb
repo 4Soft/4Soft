@@ -3,13 +3,17 @@ Site4soft::Application.routes.draw do
 
   devise_for :users
 
-  resources :members
+
 
   #criacao de membros
   match 'members/create' => 'members#create', :via => :post
 
-  root :to => 'static#index'
+  #edicao de membros 
+  match 'members/edit' => 'members#edit', :as => :member_edit
 
+  root :to => 'home#index'
+
+  resources :members
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

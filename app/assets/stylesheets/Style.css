@@ -1,0 +1,97 @@
+html, body{
+	font-family: Arial;
+	margin: 0px;
+	color: #f9f9f9;
+	background: #1e1d1d;
+}
+
+header{
+	background: #ffbe27;
+	font-family: Impact;
+	color: #161414;
+	border-top: 1px solid #000;
+	margin-top: -14px;
+}
+
+header h3{
+	font-family: "museo";
+	font-size: 22px;
+	line-height: 50px;
+	margin: 0;
+}
+
+header ul {
+	text-align: right;
+	margin: 0;
+}
+
+header ul a{
+	color: #161414;
+	text-decoration: none;
+	font-size: 22px;
+	font-family: "Helvetica"
+}
+
+header ul li{
+	display: inline;
+	list-style: none;
+	margin-left: 15px;
+	line-height: 50px;
+}
+
+.header1{
+	background: url('header1.gif') no-repeat top center;
+	min-height: 349px;
+}
+
+.header2{
+	color: #161414;
+	margin: 0px;
+	padding: 10px 20px 0px 20px;
+	background: #ffbe27;
+	min-height: 246px;
+	
+}
+
+.header2 h3{
+	font-size: 48px;
+	font-family: "museo";
+	font-weight: bolder;
+	margin: 0;
+}
+
+.header2 p{
+	font-family: "Courier New";
+	font-weight: bolder;
+	margin: 0;
+}
+
+h4{
+	font-size: 22px;
+	font-family: "museo";
+	font-weight: bolder;
+}
+
+.membro{
+	margin: 20px;
+	background: #FFF;
+	min-height: 140px;
+	min-width: 140px;
+}
+
+.trabalhos{
+	margin: 10px;
+	background: #FFF;
+	min-height: 140px;
+	min-width: 140px;
+}
+
+.formulario{
+	padding: 30px 20px 0px 20px;
+	margin: 10px;
+	line-height: 25px;
+}
+
+footer{
+	border-top: solid 3px #666;
+}

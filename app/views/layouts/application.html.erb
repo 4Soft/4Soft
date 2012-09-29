@@ -2,15 +2,51 @@
 <html>
 <head>
   <title>Site4soft</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <script type="text/javascript" src="//use.typekit.net/vir7phi.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <%= stylesheet_link_tag    "application", "Style" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
 	<p><%= notice %></p>
 	
 	<%= yield %>
 
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        
+        <div class="span4">
+          <h5>4Soft</h5>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dolor id lacus mollis varius. Vivamus sed urna tincidunt diam consequat interdum eget ac magna.
+          Duis in pretium diam:</p>
+
+          <p>2012 © 4softjrcom.br</p>
+
+        </div>
+
+        <div class="span4">
+          <h5>Redes Sociais</h5>
+          <p>Nos encontre em:</p>
+          <a href="http://facebook.com/4soft.jr">facebook.com/4soft.jr</a> <br/>
+          <a href="http://twitter.com/4softjr">twitter.com/4softjr</a>
+        </div>
+
+        <div class="span4">
+          <h5>Contato</h5>
+          <p>4Soft, Empresa Júnior</p>
+          <adress>000 Av. Algumarua, Algumbairro</adress>
+          <p>Natal</p>
+          <p>Fone:(84)0000-0000</p>
+          <a href="mailto:contato@4softjr.com">contato@4softjr.com</a> <br/>
+        </div>  
+
+      </div>
+    </div>  
+  </footer>
 </body>
+
 </html>
