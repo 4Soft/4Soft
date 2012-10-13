@@ -18,26 +18,13 @@ class MembersController < ApplicationController
   end
 
   def create
-    password = generate_password
-
-    @user = User.new
-    @user.email = params[:email]
-    @user.password = password
-    @user.password_confirmation = password
-    @user.save
-
-    @member = Member.new
-    @member.profile = @user
-
-    @member.save
-
-    MemberMailer.tell_user(@member).deliver
-
-    redirect_to root_path, 
-      :notice => 'Novo membro adicionado com sucesso'
-  rescue 
+    if Member.create(params[:email])
+      redirect_to root_path, 
+        :notice => 'Novo membro adicionado com sucesso'
+    else
       flash[:notice] = "Algum erro aconteceu"
       render :action => :new
+    end
   end
 
   def edit

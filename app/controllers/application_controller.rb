@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
 		if current_user.profileable_type == "Member"
-			member_path(current_user)
+			member_path(current_user.profileable)
 		elsif current_user.profileable_type == "Admin"
 			admin_home_path
 		end
