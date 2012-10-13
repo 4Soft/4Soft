@@ -1,0 +1,37 @@
+<script>
+
+	$(document).ready(function(){
+		var count = 0;
+
+		$('.last_field').change(function(){
+			count = count + 1;
+
+			var newInput = '<input id="project_project_file" name="project[project][file]" type="file" /><br /><br />'
+
+
+		  $('.last_field').removeClass('last_field');
+		 	$("#images").append(newInput);
+
+		})
+	});
+</script>
+
+<%= form_for @project, :multipart => true do |form| %>
+
+	<%= form.label :name %><br />
+	<%= form.text_field :name %><br /><br />
+
+	<%= form.fields_for :images, @image do |images_fields| %>
+
+			<!--<%= images_fields.label :cover, "Capa" %><br />
+		  <%= images_fields.file_field :cover %><br /><br />-->
+
+		  <%= images_fields.file_field :file %><br /><br />
+
+		  <div id="images">
+		  </div>
+
+	<% end %>
+
+  <%= form.submit "Submit" %><br />
+<% end %>

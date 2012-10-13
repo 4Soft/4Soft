@@ -39,7 +39,7 @@ class MembersController < ApplicationController
       #caso haja algum erro em atualizar a profile, dispare uma excecao
       if not @member.profile.update_attributes(
         params[:member][:profile_attributes])
-        raise new Exception
+        raise Exception.new
       end
     end
 

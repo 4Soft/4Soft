@@ -25,6 +25,11 @@ gem 'shoulda'
 
 gem 'rmagick'
 
+group :development, :test do
+  gem 'debugger'
+  #gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
