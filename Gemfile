@@ -15,11 +15,15 @@ gem 'acts-as-taggable-on'
 
 gem 'paperclip'
 
+gem "paperclip-dropbox"
+
 gem 'tlsmail'
 
 gem 'magic_encoding'
 
 gem 'shoulda'
+
+gem 'rmagick'
 
 # Gems used only for assets and not required
 # in production environments by default.

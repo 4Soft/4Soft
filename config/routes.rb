@@ -17,6 +17,8 @@ Site4soft::Application.routes.draw do
 
   root :to => 'home#index'
 
+  resources :images
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
