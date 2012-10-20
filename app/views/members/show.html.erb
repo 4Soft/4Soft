@@ -1,16 +1,38 @@
-<h1>Members#show</h1>
-<p>Find me in app/views/members/show.html.erb</p>
+<!-- <h1>Members#show</h1>
+<p>Find me in app/views/members/show.html.erb</p> -->
+<%= render "devise/shared/topbar"%>
 
-<%= gravatar_for @member %><br/>
-<%= @member.name %><br/>
-<%= @member.profile.email %><br/>
-<%= @member.facebook %><br/>
-<%= @member.twitter %><br/>
-<%= @member.linkedin %><br/>
-<%= @member.github %><br/>
-<%= @member.telefone %><br/>
-<pre><%= @member.bio %></pre>
+<div class="container">
+	<div class="row">
 
-<% if current_user.profileable.id == @member.id %>
-	<%= link_to "Editar Informações", member_edit_path %>
-<% end %>
+		<div class="span3">
+			<div class="avatar">
+				<%= gravatar_for @member %>
+			</div>
+		</div>
+
+		<div class="span3">
+			<h3><%= @member.name %><br/></h3>
+			<a href="mailto:<%= @member.profile.email %>"><%= @member.profile.email %></a><br/>
+			<a href="<%= @member.facebook %>">Facebook<a/><br/>
+			<a href="<%= @member.twitter %>">Twitter</a><br/>
+			<a href="<%= @member.linkedin %>">Linkedln</a><br/>
+			<a href="<%= @member.github %>">Github</a><br/>
+			Fone: <%= @member.telefone %><br/>
+		</div>
+
+		<div class="span6">
+			<h3>Sobre</h3>
+			<p><%= @member.bio %></p>
+		</div>
+	</div>
+
+
+	<br/>
+	<% if current_user.profileable.id == @member.id %>
+		<%= link_to "Editar Informações", member_edit_path %>
+	<% end %>
+	<br/>
+</div>
+<br/>
+
