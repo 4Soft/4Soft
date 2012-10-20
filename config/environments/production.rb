@@ -71,6 +71,11 @@ Site4soft::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
+  saved_verbosity = $-v
+  $-v = nil
+  SMTPSession = SMTP
+  $-v = saved_verbosity
+  
   require 'tlsmail'
 
   Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
@@ -89,5 +94,6 @@ Site4soft::Application.configure do
     :authentication       => 'login',
     :enable_starttls_auto => true
   }
-}
+
+  Paperclip.options[:command_path] = "/usr/bin/"
 end

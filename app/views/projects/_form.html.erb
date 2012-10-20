@@ -1,15 +1,12 @@
-<script>
+<script type="text/javascript">
 	var count = 0;
 
-	$(document).ready(function(){
-	});
-
 	function addFileField(){
-			count = count + 1;
+		count = count + 1;
 
-			var newInput = '<input id="project_images_attributes_' + count + '_file" name="project[images_attributes][' + count + '][file]" type="file" /><br /><br />'
+		var newInput = '<input id="project_images_attributes_' + count + '_file" name="project[images_attributes][' + count + '][file]" type="file" /><br /><br />';
 
-		 	$("#images_fields").append(newInput);
+		 $("#images_fields").append(newInput);
 	};
 </script>
 
@@ -18,14 +15,18 @@
 	<%= form.label :name %><br />
 	<%= form.text_field :name %><br /><br />
 
+	<%= form.label :description %><br />
+	<%= form.text_area :description %><br /><br />
+
+	<%= form.label :cover %><br />
+	<%= form.file_field :cover %><br /><br />
+
+  <p>Imagens</p>
+
 	<div id="images_fields">
 		<%= form.fields_for :images, @image do |images_fields| %>
 
-				<!--<%= images_fields.label :cover, "Capa" %><br />
-			  <%= images_fields.file_field :cover %><br /><br />-->
-
-			  <%= images_fields.file_field :file %><br /><br />
-
+			<%= images_fields.file_field :file %><br /><br />
 
 		<% end %>
 	</div>

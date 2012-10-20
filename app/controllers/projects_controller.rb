@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @projects = Project.find(params[:id])
   end
 
   def new
@@ -12,22 +13,15 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new
-
-    images = params[:project][:images_attributes]
-    @project.name = params[:project][:name]
-
-    logger.debug("debug\n\n")
-    
-    images.values.each do |im|
-      logger.debug(im)
-      img = Image.new(im)
-      @project.images << img
+    if Project.create(params[:project][:name], params[:project][:description],
+     params[:project][:cover], params[:project][:images_attributes])
+      redirect_to projects_path, 
+        :notice => 'Novo projeto adicionado com sucesso'
+    else
+      flash[:notice] = "Algum erro aconteceu"
+      render :action => :new
     end
-
-    logger.debug("\n\ndebug\n\n")
-
-    @project.save
+    
   end
 
   def edit

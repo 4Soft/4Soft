@@ -59,7 +59,7 @@ Site4soft::Application.configure do
     :authentication       => 'login',
     :enable_starttls_auto => true
   }
-
+  
   Paperclip.options[:command_path] = "/usr/bin/"
 
 end

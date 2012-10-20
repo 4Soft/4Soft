@@ -23,6 +23,8 @@ gem 'magic_encoding'
 
 gem 'shoulda'
 
+gem 'test-unit', :require => "test/unit"
+
 gem 'rmagick'
 
 group :development, :test do
