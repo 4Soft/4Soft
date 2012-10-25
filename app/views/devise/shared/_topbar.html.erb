@@ -8,14 +8,17 @@
 				<div class="span3">
 					<h3>4Soft</h3>
 				</div>
-				<div class="span9">
-					<ul>
-						<li><a><%= @member.name %></a></li>
-						<li><%= link_to "SAIR", destroy_user_session_path, :method => :delete %></li>
-					</ul>
 
-					
-				</div>
+				<% if not current_user.nil? %>
+					<div class="span9">
+						<ul>
+							<% if not @member.nil? %>
+								<li><a><%= @member.name %></a></li>
+							<% end %>
+							<li><%= link_to "SAIR", destroy_user_session_path, :method => :delete %></li>
+						</ul>
+					</div>
+				<% end %>
 		</div>
 
 	</div>
