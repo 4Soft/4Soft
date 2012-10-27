@@ -11,7 +11,7 @@
 						<li><a href="#SOMOS">QUEM SOMOS?</a></li>	
 						<li><a href="#MEJ">MEJ</a></li>
 						<li><a href="#EQUIPE">A EQUIPE</a></li>
-						<li><a href="#TRABALHOS">TRABALHOS</a></li>
+						<li><%=link_to "TRABALHOS", projects_path %></li>
 						<li><a href="#CONTATO">CONTATO</a></li>
 						<li><%=link_to "ENTRAR", new_session_path(:user) %> </li>
 					</ul>
@@ -49,13 +49,13 @@
 		<div class="quemsomos">	<!-- QUEM SOMOS -->
 		
 			<div class="span6">	
-				<a name="SOMOS"><h4>Quem Somos?</h4><a/>
+				<a name="SOMOS"><h4>Quem Somos?</h4></a>
 
 				<p>A 4Soft é a Empresa Júnior do curso de bacharelado em Engenharia de Software da Universidade Federal do Rio Grande do Norte. Atuando desde 2011 e com experiência no mercado, a empresa possui como meta desenvolver sistemas com qualidade e de uso fácil e intuitivo, visando a satisfação do cliente.</p>
 			</div>
 
 			<div class="span6">
-				<a name ="MEJ"><h4>O MEJ</h4><a/>
+				<a name ="MEJ"><h4>O MEJ</h4></a>
 
 				<p>O denominado Movimento Empresa Júnior (MEJ) vem contribuindo para que mais e mais cursos de graduação de universidades e faculdades públicas e privadas se interessem em criar suas próprias empresas juniores, fazendo com que mais e mais estudantes experimentem, ainda durante suas formações, a sensação de atuar no mercado, estimulando desde cedo o empreendedorismo. Para mais informações, acesse o <%=link_to "site do movimento", "http://brasiljunior.org.br/site/mej" %></p>
 			</div>
@@ -71,7 +71,7 @@
 	<div class="row">
 		
 		<div class="span4">
-			<h4><a name="EQUIPE">A Equipe<a/></h4>
+			<h4><a name="EQUIPE">A Equipe</h4></a>
 
 			<p>Aenean non ipsum nisi, sed condimentum arcu. Aenean aliquet congue nibh, eu placerat arcu pellentesque non. Aliquam lacinia leo ac libero tincidunt bibendum. Maecenas auctor sodales fermentum. Sed mollis bibendum mauris eget varius. Suspendisse viverra pulvinar elit in tincidunt. Mauris et nulla eget tortor pellentesque iaculis eu vitae augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sit amet tristique lorem. Cras posuere sapien nec tellus fermentum sed pulvinar libero dictum. Sed tristique rutrum sapien.</p>
 		</div>
@@ -100,35 +100,4 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="row">
-
-		<div class="span12">
-			<a name="TRABALHOS"><h4>Nossos Trabalhos</h4><a/>
-		</div>
-
-		
-		<!-- EDITAR PRA ADICIONAR AS IMGS AUTOMATICAMENTE AQUI!! -->
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<div class="span3"><div class="trabalhos"></div></div>
-
-		<!-- /EDITAR PRA ADICIONAR AS IMGS AUTOMATICAMENTE AQUI!! -->
-
-
-	</div>
-</div>
 <a name="CONTATO"><a/>

@@ -1,3 +1,4 @@
+<%= render "devise/shared/topbar"%>
 <% @projects.each do |project| %>
   <h2><%= image_tag project.cover.file.url(:thumb) %> <%= project.name %></h2>
 
