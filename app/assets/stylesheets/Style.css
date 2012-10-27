@@ -32,6 +32,19 @@ header ul a{
 	font-family: "Helvetica"
 }
 
+header a{
+	color: #161414;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 header ul li{
 	display: inline;
 	list-style: none;
