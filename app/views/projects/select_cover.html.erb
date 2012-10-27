@@ -1,0 +1,29 @@
+<%= form_for @project do |form| %>
+
+	<% @project.images.each do |img| %> 
+		<%=image_tag img %>
+		<%=form.radio_button :radio_button %>
+	<% end %> 
+
+	<%= form.label :name %><br />
+	<%= form.text_field :name %><br /><br />
+
+	<%= form.label :description %><br />
+	<%= form.text_area :description %><br /><br />
+
+	<div id="images_fields">
+		<%= form.fields_for :images, @image do |images_fields| %>
+
+				<!--<%= images_fields.label :cover, "Capa" %><br />
+			  <%= images_fields.file_field :cover %><br /><br />-->
+
+			  <%= images_fields.file_field :file %><br /><br />
+
+
+		<% end %>
+	</div>
+
+	<input type="button" value="Mais arquivos" onclick="addFileField()"/><br />
+
+  <%= form.submit "Submit" %><br />
+<% end %>
